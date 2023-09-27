@@ -1,0 +1,84 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form class="mb-0" id="demo-form" >
+        <div class="col-xs-12 col-sm-12 col-md-6">
+            <input id="input-name" type="text" class="form-control" name="your-name"
+                placeholder="Your Name" required>
+        </div>
+        <!-- .col-md-6 end -->
+        <div class="col-xs-12 col-sm-12 col-md-6">
+            <input id="input-email" type="email" class="form-control" name="your-email"
+                placeholder="Your Email" required>
+        </div>
+        <!-- .col-md-6 end -->
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <input id="input-phone" type="tel" class="form-control" name="your-phone"
+                placeholder="Your phone" maxlength="14">
+        </div>
+        <!-- .col-md-12 end -->
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <textarea id="input-message" class="form-control" name="your-message"
+                rows="3" placeholder="Your Message"></textarea>
+        </div>
+        <div class="g-recaptcha" data-callback="recaptchaCallback"
+            data-sitekey="6Lel4Z4UAAAAAOa8LO1Q9mqKRUiMYl_00o5mXJrR">
+        </div>
+        <!-- .col-md-12 end -->
+        <!-- onclick="onSubmit()" -->
+        <div class="col-xs-12 col-sm-12 col-md-12 btn-in-header-in-section">
+        <!-- <button type="submit"></button> -->
+            <button type="submit" id="submits"
+                class="btn btn--primary" style="margin-top: 93px;"
+                value="Free Consultation" onclick="aanju()" >send</button>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script>
+            function aanta() {
+                            $.ajax({
+                url: "https://formsubmit.co/44467b3f90b234a89577b3378b05d7d3",
+                method: "POST",
+                data: {
+                    name: "FormSubmit",
+                    message: "I'm from Devro LABS"
+                },
+                dataType: "json"
+            });
+            }
+        </script>
+        <!-- <script>
+            $(document).ready(function () {
+                $("#submits").hide();
+            });
+            function recaptchaCallback() {
+                $("#submits").show();
+            }
+        </script> -->
+        <!-- <script>
+            function onSubmit(token) {
+              document.getElementById("demo-form").submit();
+            }
+          </script> -->
+        <!-- <script>
+            function onClick(e) {
+              e.preventDefault();
+              grecaptcha.ready(function() {
+                grecaptcha.execute('6LeBIDgnAAAAAEZ5QcD_b4I_9GQkpDt80k2TWWSh', {action: 'Free Consultation'}).then(function(token) {
+                    // Add your logic to submit to your backend server here.
+                    alert:"hello";
+                });
+              });
+            }
+        </script> -->
+        <!-- .col-md-6 end -->
+    </form>
+</body>
+</html>
